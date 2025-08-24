@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 
-app.use(cors({ origin: ["http://localhost:5173" ,"https://blog-gram-lovat.vercel.app/#"]})); // allow frontend
+app.use(cors({ origin: ["http://localhost:5173" ,"https://blog-gram-lovat.vercel.app"]})); // allow frontend
 app.use(express.json());
 mongoose.connect("mongodb+srv://ahsan:ahsan123@cluster0.yvr1heo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
   useNewUrlParser: true,
