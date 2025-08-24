@@ -30,7 +30,7 @@ const setPosts = (posts) => {
   };
   
   useEffect(() => {
-    fetch("http://localhost:5000/posts")
+    fetch("https://bloggram-production.up.railway.app/posts")
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .catch((err) => console.error("Failed to fetch posts:", err));
@@ -45,7 +45,7 @@ const setPosts = (posts) => {
 
   const deletePost = async (postId) => { 
     try
-    {  const res = await  fetch(`http://localhost:5000/posts/${postId}`,{ 
+    {  const res = await  fetch(`https://bloggram-production.up.railway.app/posts/${postId}`,{ 
         method:'DELETE',
       }) ; 
         console.log(res); 

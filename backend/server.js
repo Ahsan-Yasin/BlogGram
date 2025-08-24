@@ -3,9 +3,10 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const Post = require("./schema");
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: "http://localhost:5173" })); // allow frontend
+
+app.use(cors({ origin: ["http://localhost:5173" ,"https://blog-gram-lovat.vercel.app/#"]})); // allow frontend
 app.use(express.json());
 mongoose.connect("mongodb+srv://ahsan:ahsan123@cluster0.yvr1heo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
   useNewUrlParser: true,
@@ -15,7 +16,7 @@ mongoose.connect("mongodb+srv://ahsan:ahsan123@cluster0.yvr1heo.mongodb.net/?ret
 .catch(err => console.error("❌ MongoDB connection error:", err));
 // this will recive all get requests means getting data from backend 
 
-
+ 
 
 app.get("/posts",async  (req, res) => {   
 
@@ -56,7 +57,7 @@ app.put("/api/posts/:id/reactions", async (req, res) => {
     res.status(500).json({ error: "Failed to update post" });
   }
 }); 
-// Delete a post
+// Delete a post 
 app.delete("/posts/:userId", async (req, res) => {
   try { 
     console.log('REQ TO DELET ERECUVED ')

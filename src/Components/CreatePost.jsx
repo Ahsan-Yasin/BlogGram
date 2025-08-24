@@ -25,16 +25,16 @@ function CreatePost() {
 
     try {
       // 🔹 2. Send to backend
-      const response = await fetch("http://localhost:5000/posts", {
+      const response = await fetch("https://bloggram-production.up.railway.app/posts", {
         method: "POST", 
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newPost),
       });
 
       const data = await response.json();
-      console.log("✅ Saved on backend:", data);
+      console.log(" Saved on backend:", data);
     } catch (error) {
-      console.error("❌ Error saving post:", error);
+      console.error(" Error saving post:", error);
     }
 
     // 🔹 3. Clear form fields
