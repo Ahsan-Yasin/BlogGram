@@ -1,0 +1,187 @@
+/* 🎨 Global Theme Colors */
+:root {
+  --bs-primary: #ff85a2; /* pastel pink */
+  --bs-primary-rgb: 255, 133, 162;
+}
+.nav-link.active {
+  background-color: #e84797 !important; /* light pink */
+  color: white !important;
+  border-radius: 8px;
+}
+/* Make .text-bg-primary and .bg-primary use pink instead */
+.text-bg-primary,
+.bg-primary {
+  background-color: #ed479a !important; /* hot pink */
+  color: white !important;
+}
+
+/* Optional: make .bg-danger also pinkish if you want */
+.bg-danger {
+  background-color: #ff4f87 !important;
+}
+
+/* 🧁 Base App Layout */
+.app {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff7f5;
+  min-height: 100vh;
+}
+
+/* 🎀 Sidebar */
+.sidebar {
+  min-height: 100vh;
+  margin-top: 50px;
+  background-color: #ffe0ec;
+  padding: 20px;
+  border-top-right-radius: 30px;
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar button {
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 12px;
+  color: #ff5e94;
+  width: 100%;
+  text-align: left;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.sidebar button:hover,
+.sidebar .active-tab {
+  background-color: #ffd6e3;
+  color: #d6336c;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+}
+
+/* 🌸 Header */
+header {
+  background-color: #fff0f5;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ff4e8e;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.1);
+  border-bottom: 2px dashed #ffc0cb;
+  border-radius: 0 0 30px 30px;
+}
+
+/* 🌷 Footer */
+footer {
+  background-color: #ffeef5;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #ff7ba9;
+  margin-top: 40px;
+  border-top: 1px solid #ffcbd8;
+  border-radius: 20px 20px 0 0;
+}
+
+/* 📝 Main Content */
+.content {
+  flex: 1;
+  padding: 30px;
+  background-color: #fff7f5;
+  margin-top: 50px;
+}
+
+/* 💌 Create Post */
+.CreatePost {
+  margin-top: 70px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+  animation: fadeIn 0.8s ease;
+}
+
+/* 🧸 Post Cards */
+.card {
+  margin-top: 90px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(255, 192, 203, 0.2);
+  border: none;
+  transition: transform 0.2s ease;
+  animation: fadeIn 0.8s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.postCard {
+  margin-top: 70px;
+  margin: 20px 50px;
+}
+
+/* 🎀 Hashtags */
+.hashtag {
+  margin: 0px 3px;
+  background-color: #e64279;
+  border-radius: 10px;
+  padding: 3px 8px;
+  font-size: 12px;
+  color: #c2255c;
+}
+
+/* 🌟 Bootstrap Button Overrides */
+.btn-primary {
+  background-color: #ff85a2;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.btn-primary:hover {
+  background-color: #ff6384;
+}
+
+/* ✍️ Form Elements */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  border-radius: 12px;
+  border: 1px solid #ffb6c1;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #fffafc;
+  color: #d6336c;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px #ffc0cb;
+  border-color: #ff85a2;
+}
+
+.form-label {
+  color: #ff5e94;
+  font-weight: 500;
+}
+.reactions{
+  margin: 15px 0 0 0;
+}
+.CreatePost{
+  margin-top: 50px;
+  width: 80%;
+}
+/* 🌈 Soft Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
